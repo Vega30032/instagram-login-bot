@@ -1,0 +1,28 @@
+from selenium import webdriver
+import time
+import userÝnfo
+browser = webdriver.Chrome(executable_path'./chromedriver')
+browser.get('https://www.instagram.com/?hl=tr*)
+time.sleep(3)
+
+usernamepath = browser.find_element_by_name('username')
+passwordpath = browser.find_element_by_name('password')
+
+usernamepath.send_keys(userÝnfo.username)
+passwordpath.send_keys(userÝnfo.password)
+
+loginbutton = browser.find_element_by_xpath('//*[@id=*loginForm*]/div/div/[3]/button/div')
+
+loginbutton.click()
+
+time.sleep(3)
+
+browser.get(https://www.instagram.com/3memo_mark1/hl=tr')
+
+gonderi = browser.find_element_by_xpath('//[@id*"react-root"]/section/main/div/header/section/ul/li[1]/span/span').text
+takipci = browser.find_element_by_xpath('//[@id*"react-root"]/section/main/div/header/section/ul/li[2]/a/span')text
+takip = browser.find_element_by_xpath('//[@id*"react-root"]/section/main/div/header/section/ul/li[3]/a/span').text
+
+print("Gönderi :*,gonderi)
+print("Takipçi :*,takipci)
+print("Takip :*,takip)
